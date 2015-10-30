@@ -89,7 +89,7 @@ var client = tumblr.createClient({
 });
 
 
-//Post request, which seeks to get info from a specificied resource (tomsharon.tumblr.com), determine whether that info (my blog posts) meets a certain condition (check whether posts are more than week old). If less than a week old, push them into the latestPosts array.
+//Post request, which seeks to get info from a specificied resource (tomsharon.tumblr.com), determine whether that info (my blog posts) meets a certain condition (check whether posts are more than week old). If less than a week old, push them into the latestPosts array. Then, iterate over parsed contacts, get relevant values for each contact. Populate email for eac contact. Then send.
 client.posts('tomsharon.tumblr.com', function(err, blog){
 	// console.log(blog)
 	var oneWeekAgo = new Date();
